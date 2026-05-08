@@ -175,8 +175,12 @@ def main(argv: list[str] | None = None) -> int:
         )
 
     if not args.args:
-        # Empty invocation → print menu and exit (caller picks a session).
-        return _do_list()
+        # Empty invocation → debrief the most-recent session (one-shot, no picker).
+        infos = locator.recent(1)
+        if not infos:
+            print("no transcripts found", file=sys.stderr)
+            return 1
+        return _do_one(infos[0].path, args.root, out, args.quiet)
 
     token = args.args[0]
     p = Path(token)

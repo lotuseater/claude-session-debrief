@@ -53,9 +53,9 @@ The plugin needs Python 3.10+ on `PATH`.
 ## Install as a CLI
 
 ```
-pip install git+https://github.com/lotuseater/claude-session-debrief.git
-session-debrief --last
-session-debrief --last 5 --out report.md
+pip install "git+https://github.com/lotuseater/claude-session-debrief.git#subdirectory=plugins/debrief"
+session-debrief last
+session-debrief last 5 --out report.md
 session-debrief path/to/transcript.jsonl --root /path/to/project
 ```
 
@@ -72,7 +72,7 @@ specific one.
 
 ```
 git clone https://github.com/lotuseater/claude-session-debrief.git
-cd claude-session-debrief
+cd claude-session-debrief/plugins/debrief
 pip install -e .[dev]
 pytest tests/ -v
 ```

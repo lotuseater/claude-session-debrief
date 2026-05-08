@@ -9,8 +9,11 @@
     {
       "name": "debrief",
       "description": "Generate a markdown retrospective of a Claude Code session — reading economy, decision points, best span, and multi-session aggregates.",
-      "category": "productivity",
+      "author": {
+        "name": "lotuseater"
+      },
       "source": "./plugins/debrief",
+      "category": "productivity",
       "homepage": "https://github.com/lotuseater/claude-session-debrief"
     }
   ]

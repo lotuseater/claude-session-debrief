@@ -1,0 +1,17 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "claude-session-debrief",
+  "description": "Single-plugin marketplace for claude-session-debrief — generate markdown retrospectives of past Claude Code sessions.",
+  "owner": {
+    "name": "lotuseater"
+  },
+  "plugins": [
+    {
+      "name": "claude-session-debrief",
+      "description": "Generate a markdown retrospective of a Claude Code session — reading economy, decision points, best span, and multi-session aggregates.",
+      "category": "productivity",
+      "source": ".",
+      "homepage": "https://github.com/lotuseater/claude-session-debrief"
+    }
+  ]
+}

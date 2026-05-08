@@ -1,0 +1,43 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "claude-session-debrief"
+version = "0.1.0"
+description = "Generate a markdown retrospective of any Claude Code session — reading economy, decision points, best span, and more."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [{ name = "lotuseater" }]
+keywords = ["claude", "claude-code", "transcript", "retrospective", "debrief"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Software Development",
+    "Topic :: Utilities",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+
+[project.scripts]
+session-debrief = "session_debrief.__main__:main"
+
+[project.urls]
+Homepage = "https://github.com/lotuseater/claude-session-debrief"
+Issues = "https://github.com/lotuseater/claude-session-debrief/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["session_debrief"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

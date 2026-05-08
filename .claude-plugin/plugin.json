@@ -1,0 +1,10 @@
+{
+  "name": "claude-session-debrief",
+  "description": "Generate a markdown retrospective of a Claude Code session — reading economy, decision points, best span, and multi-session aggregates.",
+  "version": "0.1.0",
+  "author": {
+    "name": "lotuseater"
+  },
+  "homepage": "https://github.com/lotuseater/claude-session-debrief",
+  "repository": "https://github.com/lotuseater/claude-session-debrief"
+}

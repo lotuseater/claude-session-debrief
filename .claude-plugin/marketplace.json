@@ -1,7 +1,7 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
-  "name": "claude-session-debrief",
-  "description": "Single-plugin marketplace for claude-session-debrief — generate markdown retrospectives of past Claude Code sessions.",
+  "name": "lotuseater-plugins",
+  "description": "lotuseater's Claude Code plugin marketplace — currently hosts claude-session-debrief.",
   "owner": {
     "name": "lotuseater"
   },

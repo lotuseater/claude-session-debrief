@@ -7,7 +7,7 @@
   },
   "plugins": [
     {
-      "name": "claude-session-debrief",
+      "name": "debrief",
       "description": "Generate a markdown retrospective of a Claude Code session — reading economy, decision points, best span, and multi-session aggregates.",
       "category": "productivity",
       "source": {

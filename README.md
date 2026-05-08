@@ -29,23 +29,26 @@ Across many sessions (`/debrief last 5`, `/debrief stats`):
 ## Install as a Claude Code plugin
 
 ```
-/plugin marketplace add https://github.com/lotuseater/claude-session-debrief.git
-/plugin install claude-session-debrief
+/plugin marketplace add lotuseater/claude-session-debrief
+/plugin install debrief
 ```
 
 Then inside Claude Code:
 
 ```
-/debrief                  # picker — choose from the 10 most-recent sessions
-/debrief last             # debrief the most-recent session
-/debrief last 5           # multi-session aggregate over the last 5
-/debrief stats            # aggregate over every transcript on disk
-/debrief list             # print the picker menu, no debrief
-/debrief <path-to.jsonl>  # debrief a specific transcript path
+/debrief:debrief             # picker — pick from recent sessions
+/debrief:debrief last        # debrief the most-recent session (works on active sessions too)
+/debrief:debrief last 5      # multi-session aggregate over the last 5
+/debrief:debrief stats       # aggregate over every transcript on disk
+/debrief:debrief list        # just print the picker menu
+/debrief:debrief <path>      # debrief a specific .jsonl path or session-id prefix
 ```
 
-The plugin needs Python 3.10+ on `PATH`. It writes the report to
-`~/.claude/debriefs/<session-id>.md` and also prints it inline.
+The slash command writes to `~/.claude/debriefs/<session-id>.md` and prints a one-line summary. Open the file to see the full report.
+
+`/debrief:debrief last` works on the active session too — it reads the JSONL transcript while it's being appended to and gives you a partial-but-valid debrief of the work-so-far. Re-run any time to refresh.
+
+The plugin needs Python 3.10+ on `PATH`.
 
 ## Install as a CLI
 

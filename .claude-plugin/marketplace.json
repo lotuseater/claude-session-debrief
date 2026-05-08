@@ -11,8 +11,8 @@
       "description": "Generate a markdown retrospective of a Claude Code session — reading economy, decision points, best span, and multi-session aggregates.",
       "category": "productivity",
       "source": {
-        "source": "url",
-        "url": "https://github.com/lotuseater/claude-session-debrief.git"
+        "source": "github",
+        "repo": "lotuseater/claude-session-debrief"
       },
       "homepage": "https://github.com/lotuseater/claude-session-debrief"
     }
